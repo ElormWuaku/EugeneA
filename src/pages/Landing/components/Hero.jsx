@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className="flex h-screen">
-      <div className="w-1/2 bg-[#F8D7B6] flex items-center justify-center">
-        <div className="w-fit flex flex-col items-start gap-y-6">
-          <div className="text-5xl flex flex-col">
+    <div className="flex flex-col lg:flex-row min-h-screen">
+      <div className="w-full lg:w-1/2 bg-[#F8D7B6] flex items-center justify-center px-4 py-16 lg:py-0">
+        <div className="w-full max-w-md text-center lg:text-left">
+          <div className="text-3xl lg:text-5xl mb-4">
             <span className="font-bold">Welcome to Guadzefie</span>
           </div>
-          <p className="mb-4">
+          <p className="mb-6 text-base lg:text-lg">
             Your Home Of Healthy Organic Vegetables<br />
             Fresh From Farm To Your Table
           </p>
-          <div className="flex gap-4">
+          <div className="flex justify-center lg:justify-start gap-4">
             <Link 
               to="/about" 
-              className="bg-white px-6 py-2 rounded-full drop-shadow-lg uppercase text-[#C2B931] text-sm hover:bg-gray-100 transition duration-300"
+              className="bg-white px-4 lg:px-6 py-2 rounded-full drop-shadow-lg uppercase text-[#C2B931] text-xs lg:text-sm hover:bg-gray-100 transition duration-300"
             >
               Learn More
             </Link>
             <Link 
               to="/products" 
-              className="bg-[#244521] text-white px-6 py-2 rounded-full drop-shadow-lg uppercase text-sm hover:bg-green-600 transition duration-300"
+              className="bg-[#244521] text-white px-4 lg:px-6 py-2 rounded-full drop-shadow-lg uppercase text-xs lg:text-sm hover:bg-green-600 transition duration-300"
             >
               Shop Now
             </Link>
@@ -31,7 +31,7 @@ const Hero = () => {
         </div>
       </div>
       <motion.div 
-        className="w-1/2"
+        className="w-full lg:w-1/2 h-64 lg:h-screen"
         initial={{ scale: 1 }}
         animate={{ 
           scale: [1, 1.05, 1],
