@@ -3,7 +3,7 @@ import { about, eugene, landingbg, produce } from "../../assets";
 const About = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-16">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto mt-6 px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-[#244521] mb-4">

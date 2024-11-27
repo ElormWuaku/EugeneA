@@ -17,7 +17,7 @@ const ProductDetails = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen py-16">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-xl mx-auto mt-7 px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Product Image */}
           <div>

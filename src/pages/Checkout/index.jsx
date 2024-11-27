@@ -39,7 +39,7 @@ const Checkout = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen py-16">
-      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
+      <div className="max-w-4xl mx-auto mt-6 bg-white shadow-md rounded-lg p-8">
         <h1 className="text-2xl font-bold text-[#244521] mb-6">Checkout</h1>
 
         {/* User Details Form */}
