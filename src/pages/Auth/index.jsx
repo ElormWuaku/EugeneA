@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   User,
   Lock,
@@ -10,6 +11,7 @@ import {
 import { landingbg } from "../../assets";
 
 const Auth = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("login");
   const [userType, setUserType] = useState(null);
   const [formData, setFormData] = useState({
@@ -26,9 +28,22 @@ const Auth = () => {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically add your authentication logic
+    // For this example, we'll use a simple routing based on userType
+    if (userType === 'farmer') {
+      // Redirect to farmer dashboard
+      navigate('/dashboard');
+    } else if (userType === 'buyer') {
+      // Redirect to home page
+      navigate('/');
+    }
+  };
+
   const renderLoginForm = () => {
     return (
-      <form className="space-y-6 animate-fade-in">
+      <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in">
         {activeTab === "signup" && (
           <div className="animate-slide-in">
             <label
@@ -112,6 +127,7 @@ const Auth = () => {
         </div>
         <div className="grid grid-cols-2 gap-4">
           <button
+            type="button"
             onClick={() => setUserType("buyer")}
             className={`py-5 px-6 rounded-xl border-2 transform transition-all duration-300 group ${
               userType === "buyer"
@@ -136,6 +152,7 @@ const Auth = () => {
           </button>
 
           <button
+            type="button"
             onClick={() => setUserType("farmer")}
             className={`py-5 px-6 rounded-xl border-2 transform transition-all duration-300 group ${
               userType === "farmer"
@@ -193,6 +210,7 @@ const Auth = () => {
         <div className="mb-6 flex justify-center">
           <div className="inline-flex bg-green-100 rounded-xl p-1 shadow-inner">
             <button
+              type="button"
               onClick={() => {
                 setActiveTab("login");
                 setUserType(null);
@@ -206,6 +224,7 @@ const Auth = () => {
               Log In
             </button>
             <button
+              type="button"
               onClick={() => {
                 setActiveTab("signup");
                 setUserType(null);

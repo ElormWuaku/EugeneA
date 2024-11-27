@@ -14,7 +14,21 @@ import tangerine from "./images/tangerine.jpg"
 import orange from "./images/orange.jpg"
 import about from "./images/about.jpg"
 import landingbg from "./images/landingbg.jpg"
+import sweet from "./images/sweet.jpg"
+import cassava from "./images/cassava.jpg"
+import plantain from "./images/plantain.jpg"
+import carrots from "./images/carrots.jpg"
+import coconut from "./images/coconut.jpg"
+import corn from "./images/corn.jpg"
+import avo from "./images/avo.jpg"
+import papaya from "./images/papaya.jpg"
+import tomato from "./images/tomato.jpg"
+import pepper from "./images/pepper.jpg"
+import onion from "./images/onion.jpg"
+import handshake from "./images/handshake.jpg"
+import lady from "./images/lady.jpg"
+import eugene from "./images/eugene.jpg"
+import produce from "./images/produce.jpg"
 
 
-
-export {logo, hero, herobg2, gros, logo2, aubergine, banana, cucumbers,eggplant,mango, okra,pineapple,tangerine, orange, about, landingbg}
+export {logo, hero, herobg2, gros, logo2, aubergine, banana, cucumbers,eggplant,mango, okra,pineapple,tangerine, orange, about, landingbg, avo, sweet, cassava, plantain,carrots, coconut, corn, papaya, tomato, pepper, onion, eugene, lady, produce, handshake}

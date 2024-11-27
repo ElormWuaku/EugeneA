@@ -9,6 +9,7 @@ import Carte from "./pages/Carte"
 import Auth from "./pages/Auth"
 import FarmerDashboard from "./pages/FarmerDashboard"
 import About from "./pages/About"
+import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="track-order" element={<TrackOrder />} />
           <Route path="products" element={<ProductPage />} />
+          <Route path="product-details/:id" element={<ProductDetails />} />
           <Route path="auth" element={<Auth/>} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="cart" element={<Carte />} />

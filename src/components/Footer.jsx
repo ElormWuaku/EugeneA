@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,40 +8,46 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-[#EABC5E]">Guadzefie</h3>
+            <h2 className="text-lg font-bold mb-4 text-[#EABC5E]">Guadzefie</h2>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Connecting you to quality products. We value your satisfaction and provide fresh and locally sourced goods.
+              Connecting you to quality products. We value your satisfaction and
+              provide fresh and locally sourced goods.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation Links */}
           <div>
             <h4 className="text-lg font-bold mb-4 text-[#EABC5E]">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/" className="hover:text-gray-400">
+                <a href="#home" className="hover:text-gray-400">
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/products" className="hover:text-gray-400">
-                  Products
-                </Link>
+                <a href="#about" className="hover:text-gray-400">
+                  About
+                </a>
               </li>
               <li>
-                <Link to="/about" className="hover:text-gray-400">
-                  About Us
-                </Link>
+                <a href="#shop" className="hover:text-gray-400">
+                  Shop
+                </a>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-gray-400">
+                <a href="#reviews" className="hover:text-gray-400">
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-gray-400">
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Account & Social Links */}
+          {/* Account Links & Social Media */}
           <div>
             <h4 className="text-lg font-bold mb-4 text-[#EABC5E]">Account</h4>
             <ul className="space-y-2 text-sm">

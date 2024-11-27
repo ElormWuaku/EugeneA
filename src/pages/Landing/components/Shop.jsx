@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
-import { aubergine, banana, cucumbers, eggplant, okra, orange, pineapple, tangerine } from "../../../assets";
+import {
+  aubergine,
+  banana,
+  cucumbers,
+  eggplant,
+  okra,
+  orange,
+  pineapple,
+  tangerine,
+} from "../../../assets";
 
 const Shop = () => {
   const products = [
@@ -8,16 +17,14 @@ const Shop = () => {
       image: aubergine,
       name: "Fresh Aubergines",
       price: "$2.99/lb",
-      description:
-        "Locally-sourced aubergines, perfect for your next meal.",
+      description: "Locally-sourced aubergines, perfect for your next meal.",
     },
     {
       id: 2,
       image: banana,
       name: "Sweet Bananas",
       price: "$3.49/lb",
-      description:
-        "Sweet bananas, grown with care on our family farm.",
+      description: "Sweet bananas, grown with care on our family farm.",
     },
     {
       id: 3,
@@ -96,7 +103,9 @@ const Shop = () => {
                 <p className="text-gray-600 mb-4">{product.price}</p>
                 <p className="text-gray-500 mb-4">{product.description}</p>
                 <button className="bg-[#244521] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full flex items-center">
-                  Add to Cart
+                  <Link to="/product-details" className="w-full h-full">
+                    See More
+                  </Link>
                 </button>
               </div>
             </div>
