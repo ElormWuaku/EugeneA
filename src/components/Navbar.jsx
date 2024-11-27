@@ -18,13 +18,24 @@ const Navbar = () => {
 
   const handleNavigation = (path) => {
     if (path.startsWith("#")) {
-      // Scroll to in-page section
+      // For in-page section scrolling
       const section = document.querySelector(path);
       if (section) {
+        // If on landing page, scroll smoothly
         section.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // If not on landing page, navigate to landing page and then scroll
+        navigate("/");
+        // Use setTimeout to ensure page loads before scrolling
+        setTimeout(() => {
+          const sectionAfterNavigation = document.querySelector(path);
+          if (sectionAfterNavigation) {
+            sectionAfterNavigation.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
       }
     } else {
-      // Navigate to another page
+      // For page navigation
       navigate(path);
     }
   };
@@ -38,7 +49,7 @@ const Navbar = () => {
       {/* Logo - Navigate to Hero */}
       <div
         className="cursor-pointer"
-        onClick={() => handleNavigation("#home")}
+        onClick={() => handleNavigation("/")}
       >
         <img
           src={logo}
