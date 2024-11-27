@@ -11,6 +11,8 @@ const Checkout = () => {
 
   const [paymentMethod, setPaymentMethod] = useState("");
 
+  const [deliveryOption, setDeliveryOption] = useState("Doorstep Delivery");
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUserDetails((prevDetails) => ({ ...prevDetails, [name]: value }));
@@ -23,6 +25,15 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can replace this alert with API calls to save data in a real app
+
+    // Include deliveryOption in the submitted data
+    const orderData = {
+      ...userDetails,
+      paymentMethod,
+      deliveryOption,
+    };
+
+    console.log(orderData); // Replace with API call to save data
     alert("Order placed successfully!");
   };
 
@@ -103,6 +114,58 @@ const Checkout = () => {
               required
               className="w-full p-3 border rounded-lg"
             />
+          </div>
+
+          {/* Delivery Options */}
+          <div className="mb-6">
+            <h2 className="text-lg font-bold text-gray-800 mb-4">
+              Delivery Method
+            </h2>
+            <div className="flex items-center space-x-4">
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="Doorstep Delivery"
+                  checked={deliveryOption === "Doorstep Delivery"}
+                  onChange={(e) => setDeliveryOption(e.target.value)}
+                  className="w-5 h-5"
+                />
+                <span className="text-gray-600">Doorstep Delivery</span>
+              </label>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="Pickup Point"
+                  checked={deliveryOption === "Pickup Point"}
+                  onChange={(e) => setDeliveryOption(e.target.value)}
+                  className="w-5 h-5"
+                />
+                <span className="text-gray-600">Pickup Point</span>
+              </label>
+            </div>
+            {deliveryOption === "Pickup Point" && (
+              <div className="mt-4">
+                <label
+                  htmlFor="pickupPoint"
+                  className="block text-gray-600 font-bold mb-2"
+                >
+                  Select Pickup Point
+                </label>
+                <select
+                  id="pickupPoint"
+                  name="pickupPoint"
+                  required
+                  className="w-full p-3 border rounded-lg"
+                >
+                  <option value="">Select a location</option>
+                  <option value="Point A">Point A</option>
+                  <option value="Point B">Point B</option>
+                  <option value="Point C">Point C</option>
+                </select>
+              </div>
+            )}
           </div>
 
           {/* Payment Options */}

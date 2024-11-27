@@ -1,21 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { User, ShoppingBag, Menu, X } from "lucide-react";
 import { logo } from "../assets";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleNavigation = (path) => {
     setMenuOpen(false); // Close menu on navigation
@@ -38,11 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 transition-all duration-300 ease-in-out ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-white shadow-md">
       {/* Logo */}
       <div
         className="cursor-pointer"
