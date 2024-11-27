@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-[#EABC5E]">Guadzefie</h2>
+            <h1 className="text-2xl font-bold mb-4 text-[#EABC5E]">Guadzefie</h1>
             <p className="text-gray-400 text-sm leading-relaxed">
               Connecting you to quality products. We value your satisfaction and
               provide fresh and locally sourced goods.
