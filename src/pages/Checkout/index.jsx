@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Checkout = () => {
@@ -107,7 +107,9 @@ const Checkout = () => {
 
           {/* Payment Options */}
           <div className="mb-6">
-            <h2 className="text-lg font-bold text-gray-800 mb-4">Payment Method</h2>
+            <h2 className="text-lg font-bold text-gray-800 mb-4">
+              Payment Method
+            </h2>
             <div className="flex items-center space-x-4">
               <label className="flex items-center space-x-2">
                 <input
@@ -138,14 +140,21 @@ const Checkout = () => {
           <div className="mt-6">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-bold">Order Total:</h3>
-              <p className="text-xl font-semibold">$65.00</p> {/* Replace with dynamic total */}
+              <p className="text-xl font-semibold">$65.00</p>{" "}
+              {/* Replace with dynamic total */}
             </div>
-            <button
+            {/* <button
               type="submit"
               className="w-full bg-[#EABC5E] hover:bg-[#c49d4e] text-white font-bold py-3 px-6 rounded-lg"
             >
               Place Order
-            </button>
+            </button> */}
+            <Link
+              to="/payment"
+              className="bg-[#EABC5E] hover:bg-[#c49d4e] text-white font-bold py-3 px-6 rounded-lg"
+            >
+              Place Order
+            </Link>
           </div>
         </form>
 

@@ -10,6 +10,8 @@ import Auth from "./pages/Auth"
 import FarmerDashboard from "./pages/FarmerDashboard"
 import About from "./pages/About"
 import ProductDetails from "./pages/ProductDetails";
+import Payment from "./pages/Payment";
+import Confirmation from "./pages/Confirmation";
 
 const App = () => {
   return (
@@ -23,8 +25,10 @@ const App = () => {
           <Route path="products" element={<ProductPage />} />
           <Route path="product-details/:id" element={<ProductDetails />} />
           <Route path="auth" element={<Auth/>} />
-          <Route path="checkout" element={<Checkout />} />
           <Route path="cart" element={<Carte />} />
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="payment" element={<Payment />} />
+          <Route path="confirmation" element={<Confirmation />} />
         </Route>
       </Routes>
     </BrowserRouter>
