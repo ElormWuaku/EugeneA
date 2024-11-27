@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { User, ShoppingBag } from "lucide-react";
 import { logo } from "../assets";
-
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,14 +16,30 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavigation = (path) => {
+    if (path.startsWith("#")) {
+      // Scroll to in-page section
+      const section = document.querySelector(path);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to another page
+      navigate(path);
+    }
+  };
+
   return (
     <nav
       className={`flex justify-between items-center py-4 px-6 fixed z-50 w-full transition-all duration-300 ease-in-out ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      {/* Logo */}
-      <div className="cursor-pointer">
+      {/* Logo - Navigate to Hero */}
+      <div
+        className="cursor-pointer"
+        onClick={() => handleNavigation("#home")}
+      >
         <img
           src={logo}
           alt="Guadzefie Logo"
@@ -32,26 +49,37 @@ const Navbar = () => {
 
       {/* Links */}
       <div className="space-x-6 text-sm">
-        {["SHOP", "ABOUT", "OUR IMPACT"].map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase().replace(" ", "-")}`}
-            className="text-black hover:text-black relative group uppercase"
+        {[
+          { name: "HOME", path: "#home" },
+          { name: "SHOP", path: "/products" },
+          { name: "ABOUT", path: "#about" },
+          { name: "CONTACT", path: "#contact" },
+        ].map((item) => (
+          <button
+            key={item.name}
+            onClick={() => handleNavigation(item.path)}
+            className="text-[#244521] hover:text-black relative group uppercase"
           >
-            {item}
+            {item.name}
             <span className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-          </a>
+          </button>
         ))}
       </div>
 
       {/* Icons */}
       <div className="flex items-center space-x-4">
-        <a href="#account" className="text-black">
+        <button
+          onClick={() => handleNavigation("/auth")}
+          className="text-[#244521]"
+        >
           <User className="h-6 w-6" />
-        </a>
-        <a href="#cart" className="text-black">
+        </button>
+        <button
+          onClick={() => handleNavigation("/cart")}
+          className="text-[#244521]"
+        >
           <ShoppingBag className="h-6 w-6" />
-        </a>
+        </button>
       </div>
     </nav>
   );

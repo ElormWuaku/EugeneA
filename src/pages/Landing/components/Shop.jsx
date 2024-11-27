@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { aubergine, banana, cucumbers, eggplant, okra, orange, pineapple, tangerine } from "../../../assets";
 
 const Shop = () => {
@@ -67,7 +67,17 @@ const Shop = () => {
   return (
     <div className="bg-gray-100 py-16">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold mb-8 text-gray-800">Our Products</h2>
+        {/* Heading Section */}
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-4xl font-bold text-gray-800">Our Products</h2>
+          <button className="bg-[#234522] text-white py-3 px-6 rounded-full flex items-center hover:bg-[#C2B931] transition duration-300">
+            <Link to="/products" className="w-full h-full">
+              Go To Shop
+            </Link>
+          </button>
+        </div>
+
+        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <div
@@ -86,7 +96,6 @@ const Shop = () => {
                 <p className="text-gray-600 mb-4">{product.price}</p>
                 <p className="text-gray-500 mb-4">{product.description}</p>
                 <button className="bg-[#244521] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full flex items-center">
-                  
                   Add to Cart
                 </button>
               </div>

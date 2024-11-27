@@ -46,7 +46,7 @@ const Contact = () => {
       <section id="contact" className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-100 to-white text-gray-900 py-20">
         <div className="w-full max-w-4xl px-4">
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900"
+            className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#244521]"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -115,7 +115,7 @@ const Contact = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <button
-                  className="bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
+                  className="bg-[#244521] hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
                   type="submit"
                   disabled={isSubmitting}
                 >

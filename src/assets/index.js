@@ -12,6 +12,9 @@ import okra from "./images/okra.jpg"
 import pineapple from "./images/pineapple.jpg"
 import tangerine from "./images/tangerine.jpg"
 import orange from "./images/orange.jpg"
+import about from "./images/about.jpg"
+import landingbg from "./images/landingbg.jpg"
 
 
-export {logo, hero, herobg2, gros, logo2, aubergine, banana, cucumbers,eggplant,mango, okra,pineapple,tangerine, orange}
+
+export {logo, hero, herobg2, gros, logo2, aubergine, banana, cucumbers,eggplant,mango, okra,pineapple,tangerine, orange, about, landingbg}

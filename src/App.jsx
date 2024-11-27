@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import RootLayout from "./layouts/RootLayout"
 import Landing from "./pages/Landing"
-import UserDashboard from "./pages/UserDashboard"
 import TrackOrder from "./pages/TrackOrder"
 import ProductPage from "./pages/ProductPage"
-import Login from "./pages/Login"
 import Checkout from "./pages/Checkout"
 import Carte from "./pages/Carte"
+import Auth from "./pages/Auth"
+import FarmerDashboard from "./pages/FarmerDashboard"
+import About from "./pages/About"
 
 const App = () => {
   return (
@@ -14,12 +16,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Landing />} />
-          <Route path="dashboard" element={<UserDashboard />} />
+          <Route path="dashboard" element={<FarmerDashboard />} />
+          <Route path="about" element={<About />} />
           <Route path="track-order" element={<TrackOrder />} />
           <Route path="products" element={<ProductPage />} />
-          <Route path="login" element={<Login />} />
+          <Route path="auth" element={<Auth/>} />
           <Route path="checkout" element={<Checkout />} />
-          <Route path="carte" element={<Carte />} />
+          <Route path="cart" element={<Carte />} />
         </Route>
       </Routes>
     </BrowserRouter>

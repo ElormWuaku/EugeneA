@@ -1,4 +1,5 @@
-import { logo2 } from "../../../assets";
+import { Link } from "react-router-dom";
+import { about } from "../../../assets";
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center">
         {/* Left side - Image */}
         <div className="md:w-1/2 mb-8 md:mb-0">
-          <img src={logo2} alt="Guadzefie logo" className="w-full h-auto" />
+          <img src={about} alt="Guadzefie logo" className="w-full h-auto" />
         </div>
 
         {/* Right side - Content */}
@@ -24,7 +25,9 @@ const About = () => {
             language ocean.
           </p>
           <button className="bg-[#234522] text-white py-3 px-6 rounded-full flex items-center hover:bg-[#C2B931] transition duration-300">
-            Read More
+           <Link to="/about" className="w-full h-full">
+           Read More
+           </Link>
           </button>
         </div>
       </div>
