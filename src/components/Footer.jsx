@@ -72,7 +72,15 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-4 text-[#EABC5E]">Follow Us</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.instagram.com/guadzefie/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-gray-100 transition-colors"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61569857780347"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gray-100 transition-colors"
@@ -80,20 +88,12 @@ const Footer = () => {
                   <i className="fab fa-facebook-f"></i>
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.tiktok.com/@guadzefie"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gray-100 transition-colors"
                 >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-gray-100 transition-colors"
-                >
-                  <i className="fab fa-instagram"></i>
+                  <i className="fab fa-tiktok"></i>
                 </a>
               </div>
             </div>
