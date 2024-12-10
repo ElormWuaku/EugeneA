@@ -19,10 +19,7 @@ const About = () => {
             Quality Makes the Belief for Customers
           </h2>
           <p className="text-gray-600 mb-6">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.
+        Guadziefie is an online marketplace designed to connect farmers, specifically those in rural areas directly to consumers and buyers. The focus is on making food more accessible and improving farmer-consumer connections by removing intermediaries and introducing strategically placed pick-up points for easier logistics.
           </p>
           <button className="bg-[#234522] text-white py-3 px-6 rounded-full flex items-center hover:bg-[#C2B931] transition duration-300">
            <Link to="/about" className="w-full h-full">

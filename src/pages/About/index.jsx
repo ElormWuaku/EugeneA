@@ -1,4 +1,4 @@
-import { about, eugene, landingbg, produce } from "../../assets";
+import { about,landingbg, produce, profile } from "../../assets";
 
 const About = () => {
   return (
@@ -22,7 +22,7 @@ const About = () => {
           {/* Left - Image */}
           <div>
             <img
-              src= {eugene}
+              src= {profile}
               alt="Eugene Amoakwah"
               className="w-full h-auto rounded-lg shadow-md"
             />

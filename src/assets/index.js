@@ -29,6 +29,7 @@ import handshake from "./images/handshake.jpg"
 import lady from "./images/lady.jpg"
 import eugene from "./images/eugene.jpg"
 import produce from "./images/produce.jpg"
+import profile from "./images/profile.jpg"
 
 
-export {logo, hero, herobg2, gros, logo2, aubergine, banana, cucumbers,eggplant,mango, okra,pineapple,tangerine, orange, about, landingbg, avo, sweet, cassava, plantain,carrots, coconut, corn, papaya, tomato, pepper, onion, eugene, lady, produce, handshake}
+export {logo, hero, herobg2, gros, logo2, aubergine, banana, cucumbers,eggplant,mango, okra,pineapple,tangerine, orange, about, landingbg, avo, sweet, cassava, plantain,carrots, coconut, corn, papaya, tomato, pepper, onion, eugene, lady, produce, handshake, profile}
