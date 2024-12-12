@@ -26,10 +26,10 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_vjh0nsr',
-        'template_gp866ob',
+        'service_jcu8fgl',
+        'template_e0qg95k',
         formData,
-        'TKi5tH-L-cktAPqfX'
+        'PBd9rFYgKRGg1KAxN'
       );
       setSubmitMessage('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });

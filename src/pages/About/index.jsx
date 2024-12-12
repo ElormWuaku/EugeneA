@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { about,landingbg, produce, profile } from "../../assets";
 
 const About = () => {
@@ -102,12 +103,12 @@ const About = () => {
             Be a part of this transformative initiative. Together, we can 
             revolutionize agriculture in Ghana and beyond.
           </p>
-          <a
-            href="/products"
-            className="bg-[#EABC5E] hover:bg-[#c49d4e] text-white font-bold py-3 px-6 rounded-lg"
+          <Link
+            to="/products"
+            className="bg-[#EABC5E] hover:bg-[#c49d4e] text-white font-bold py-3 px-6 rounded-lg inline-block"
           >
             Explore Fresh Products
-          </a>
+          </Link>
         </div>
       </div>
     </div>
